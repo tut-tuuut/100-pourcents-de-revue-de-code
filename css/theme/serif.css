@@ -150,7 +150,7 @@ thead tr {
   color: #000;
 }
 thead th {
-  text-align: center;
+  text-align: center !important;
 }
 tbody tr {
   background: #eee;
