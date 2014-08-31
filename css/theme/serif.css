@@ -133,3 +133,28 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #51483d; }
+
+
+/****** AHR ***/
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+table td, table th {
+  border: 1px solid #777 !important;
+  padding: .5em !important;
+}
+thead tr {
+  background: #fff;
+  color: #000;
+}
+thead th {
+  text-align: center;
+}
+tbody tr {
+  background: #eee;
+}
+tbody tr:nth-child(2n) {
+  background: #fff;
+}
