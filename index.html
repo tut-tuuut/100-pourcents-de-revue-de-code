@@ -47,6 +47,9 @@
 					<p>
 						<small><a href="http://tut-tuuut.github.io/">Agnès Haasser</a> / <a href="http://twitter.com/tut_tuuut">@tut_tuuut</a></small>
 					</p>
+					<aside class="notes">
+						Objectif de la conférence : donner un retour d'expérience sur la revue de code chez TEA, comparer avec mes autres expériences de revue de code. Vous donner envie de faire "bien", non seulement de faire de la revue de code mais aussi d'utiliser git. (Ou n'importe quel gestionnaire de version qui marche d'ailleurs…)
+					</aside>
 				</section>
 
 				<section>
@@ -58,6 +61,9 @@
 						<li>8 développeurs dont 6 full-stack</li>
 						<li>29 projets (!)</li>
 					</ul>
+					<aside class="notes">
+						On a beaucoup de techno différentes et de développeurs compétents sur plusieurs sujets à la fois. Forcément on a plus d'affinités sur certains sujets que sur d'autres.
+					</aside>
 				</section>
 
 				<section>
@@ -74,7 +80,7 @@
 					<h2>Flashback : ma première revue de code</h2>
 					<ul>
 						<li>Contexte : j'étais stagiaire dans une SSII…</li>
-						<li>On nous a demandé, à moi et aux autres stagiaires, de commiter sur une branche [SVN] spécifique.</li>
+						<li>On nous a demandé, à moi et aux autres stagiaires, de commiter sur une branche (SVN) spécifique.</li>
 						<li>Le directeur technique (= le plus gros expert de la direction technique, une pointure) a relu le code et donné des conseils et des compliments sur celui-ci.</li>
 						<li>Après correction, le code a été fusionné avec la branche qui partait en prod. Et nous avons commité la suite du code sur la branche master.</li>
 					</ul>
@@ -90,6 +96,85 @@
 							<li>Mais… je n'en ai pas eu d'autres. Le DT était occupé, avec plusieurs centaines de dev dans la boîte, il n'allait pas relire chaque commit un par un…</li>
 						</ul>
 					</section>
+				</section>
+				<section>
+					<h2>Chez TEA, en 2014</h2>
+					<ul>
+						<li>Pas de direction technique : juste une équipe de 10 techniciens avec des affinités différentes… mais qui peuvent intervenir sur n'importe lequel de nos différents projets.</li>
+						<li>Et si on partageait les connaissances entre nous, sans sous-entendre que certains savent tout et d'autres rien ?</li>
+						<li>La connaissance circule entre développeurs, pas juste des DT vers les dev.</li>
+						<li>ANARCHIE</li>
+					</ul>
+				</section>
+				<section>
+					<h2>La revue de code par <em>pull request</em></h2>
+					<h3>1. Ouvrir une <em>pull request</em></h3>
+					<ul>
+						<li>Tartempion crée une branche git et commite son bazar.
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+git checkout -b devel/display-customer-name
+git add -p # choose which parts of files you add
+git commit # write a beautiful commit message</code></pre>
+						</li>
+						<li>Tartempion push sa branche sur le dépôt partagé sur Github.
+							<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+git push origin devel/display-customer-name</code></pre>
+						</li>
+						<li>Tartempion clique sur le bouton « open pull request » sur Github</li>
+					</ul>
+				</section>
+				<section>
+					<h2>La revue de code par <em>pull request</em></h2>
+					<h3>2. La revue de code</em></h3>
+					<ul>
+						<li>Toto et Tata lisent sur l'interface web le code modifié par Tartempion.</li>
+						<li>Ils font des commentaires constructifs…</li>
+						<li>…ou pas.</li>
+						<li>…et Tata prend des screenshots pour sa conférence Paris Web.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>La revue de code par PR</h2>
+					<h3>3. La validation de la PR</h3>
+					<ul>
+						<li>Quand au moins 2 personnes ont validé la PR</li>
+						<li>Si les remarques importantes et les bugs potentiels ont été pris en compte</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemples de trucs qu'on remarque grâce à une PR</h2>
+					<blockquote>
+						Tiens, ça marche de faire le <code>DROP TABLE</code> avant de supprimer les contraintes de clés étrangères ?
+					</blockquote>
+					<p>=> Script de migration réparé avant la mise en prod
+				</section>
+
+				<section>
+					<h2>Exemple de truc que la PR n'a pas permis de remarquer</h2>
+					<blockquote>
+						Tiens, quand je télécharge le fichier, il s'appelle <code>la-duchesse-insoumise.acsm.acsm</code>. Pourquoi j'ai deux fois l'extension tout à coup ?
+					</blockquote>
+					<p>=> Les clients ont téléchargé des fichiers nommés bizarrement pendant une journée.
+				</section>
+
+				<section>
+					<h2>Je &lt;3 les PR</h2>
+					<table>
+						<tr>
+							<th>Kœur</th>
+							<th>Pas kœur</th>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>Permet de détecter des bugs graves avant mise en prod.</li>
+									<li>Permet d'informer tous les développeurs de ce qui se passe.</li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+					</table>
 				</section>
 
 				<section>
