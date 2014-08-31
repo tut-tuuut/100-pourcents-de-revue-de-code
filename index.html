@@ -79,6 +79,14 @@
 						<li>Faite par le DT à partir de code commité sur une branche spécifique.</li>
 						<li>J'ai appris plein de trucs !</li>
 					</ul>
+					<aside class="notes">
+						<ul>
+						<li>Contexte : j'étais stagiaire dans une SSII…</li>
+						<li>On nous a demandé, à moi et aux autres stagiaires, de commiter sur une branche (SVN) spécifique.</li>
+						<li>Le directeur technique (= le plus gros expert de la direction technique, une pointure) a relu le code et donné des conseils et des compliments sur celui-ci.</li>
+						<li>Après correction, le code a été fusionné avec la branche qui partait en prod. Et nous avons commité la suite du code sur la branche master.</li>
+					</ul>
+					</aside>
 				</section>
 
 				<section>
@@ -113,6 +121,19 @@
 
 				<section>
 					<h1>20 %</h1>
+					<aside class="notes">
+						Changement de contexte et de style de revue de code
+					</aside>
+				</section>
+
+				<section>
+					<h2>Chez TEA, en 2013</h2>
+					<ul>
+						<li>Pas de direction technique : juste une équipe de 10 techniciens avec des affinités différentes… mais qui peuvent intervenir sur n'importe lequel de nos différents projets.</li>
+						<li>Et si on partageait les connaissances entre nous, sans sous-entendre que certains savent tout et d'autres rien ?</li>
+						<li>La connaissance circule entre développeurs, pas juste des DT vers les dev.</li>
+						<li>ANARCHIE</li>
+					</ul>
 				</section>
 
 				<section>
@@ -139,36 +160,36 @@
 				</section>
 
 				<section>
-					<section>
-					<h2>Flashback : ma première revue de code</h2>
+					<h2>Revue de code par « croisement » à l'oral avec un collègue</h2>
 					<ul>
-						<li>Contexte : j'étais stagiaire dans une SSII…</li>
-						<li>On nous a demandé, à moi et aux autres stagiaires, de commiter sur une branche (SVN) spécifique.</li>
-						<li>Le directeur technique (= le plus gros expert de la direction technique, une pointure) a relu le code et donné des conseils et des compliments sur celui-ci.</li>
-						<li>Après correction, le code a été fusionné avec la branche qui partait en prod. Et nous avons commité la suite du code sur la branche master.</li>
+						<li>Avant de commencer une tâche : on explique à un collègue comment on compte faire.</li>
+						<li>Avant de marquer une tâche comme finie : on explique à un collègue comment on a fait en lui montrant les bouts de code « intéressants ».</li>
+						<li>Pendant la tâche, en cas de problème ou de question : on explique où on en est et ce qu'on veut faire.</li>
 					</ul>
-					</section>
+					<blockquote>
+						Quelqu'un veut croiser ?
+					</blockquote>
+				</section>
 
-					<section>
-						<h2>Ma première revue de code : bilan</h2>
-						<ul>
-							<li>C'était trop bien ! J'ai appris plein de choses, j'ai corrigé de mauvaises habitudes dans l'œuf.</li>
-							<li>J'en voulais ENCORE !</li>
-						</ul>
-						<ul>
-							<li>Mais… je n'en ai pas eu d'autres. Le DT était occupé, avec plusieurs centaines de dev dans la boîte, il n'allait pas relire chaque commit un par un…</li>
-						</ul>
-					</section>
-				</section>
 				<section>
-					<h2>Chez TEA, en 2014</h2>
+					<h2>Revue de code par « croisement »</h2>
 					<ul>
-						<li>Pas de direction technique : juste une équipe de 10 techniciens avec des affinités différentes… mais qui peuvent intervenir sur n'importe lequel de nos différents projets.</li>
-						<li>Et si on partageait les connaissances entre nous, sans sous-entendre que certains savent tout et d'autres rien ?</li>
-						<li>La connaissance circule entre développeurs, pas juste des DT vers les dev.</li>
-						<li>ANARCHIE</li>
+						<li>Petit effet « canard en plastique » qui débloque de temps en temps.</li>
+						<li>Détection de certains bugs ou écarts aux conventions.</li>
+						<li>Partage de connaissances (apprentissage) et d'informations (cette modif est passée en prod) entre les deux collègues qui interviennent.</li>
 					</ul>
 				</section>
+
+				<section>
+					<h2>Revue de code par « croisement »</h2>
+					<ul>
+						<li>Inconvénients : ne permet pas toujours de débloquer ni de détecter les bugs (on a juste la vision de 2 personnes).</li>
+						<li>La circulation d'infos et de connaissances est limitée à 2 personnes : au mieux on se répète, au pire le reste de l'équipe ignore.</li>
+						<li>La personne avec qui on croise doit s'interrompre dans sa tâche. Au final c'est la disponibilité à un moment donné qui est le critère pour choisir le collègue avec qui on croise.</li>
+						<li>Avantages : c'est régulier, ça devient vite un réflexe (« qui n'a pas croisé en fin de tâche ? »). Facile à faire : on a toujours au moins un collègue à dispo.</li>
+					</ul>
+				</section>
+
 				<section>
 					<h2>La revue de code par <em>pull request</em></h2>
 					<h3>1. Ouvrir une <em>pull request</em></h3>
@@ -223,20 +244,23 @@ git push origin devel/display-customer-name</code></pre>
 
 				<section>
 					<h2>Je &lt;3 les PR</h2>
-					<table>
-						<tr>
-							<th>Kœur</th>
-							<th>Pas kœur</th>
-						</tr>
-						<tr>
-							<td>
-								<ul>
-									<li>Permet de détecter des bugs graves avant mise en prod.</li>
-									<li>Permet d'informer tous les développeurs de ce qui se passe.</li>
-								</ul>
-							</td>
-							<td></td>
-						</tr>
+					<table class="compare">
+						<thead>
+							<tr>
+								<td>+</td>
+								<td>–</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Partage des connaissances</td>
+								<td>Tendance à moins croiser</td>
+							</tr>
+							<tr>
+								<td>Partage des informations</td>
+								<td>On ne détecte pas tous les bugs.</td>
+							</tr>
+						</tbody>
 					</table>
 				</section>
 
