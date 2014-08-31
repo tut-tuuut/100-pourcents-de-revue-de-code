@@ -137,24 +137,24 @@ body {
 
 /****** AHR ***/
 
-table {
+table.compare {
   border-collapse: collapse;
   table-layout: fixed;
 }
-table td, table th {
-  border: 1px solid #777 !important;
-  padding: .5em !important;
+table.compare td, table.compare th {
+  border: 1px solid #777;
+  padding: .5em;
 }
-thead tr {
+.compare thead tr {
   background: #fff;
   color: #000;
 }
-thead th {
-  text-align: center !important;
+.compare thead th {
+  text-align: center;
 }
-tbody tr {
+.compare tbody tr {
   background: #eee;
 }
-tbody tr:nth-child(2n) {
+.compare tbody tr:nth-child(2n) {
   background: #fff;
 }
