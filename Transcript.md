@@ -31,3 +31,6 @@ Par contre, ça avait quelques inconvénients. Déjà, on ne croisait qu'à deux
 Ensuite, on ne croisait pas sur la totalité du code modifié, mais seulement sur les parties qu'on trouvait intéressantes au moment de coder. Ça peut être bien si ça peut éviter de relire toutes les modifs "cosmétiques", par exemple, mais… par exemple, les modifs de CSS ne sont pas forcément considérées comme "intéressantes" par mes collègues, alors que j'ai souvent mon mot à dire sur un positionnement ou sur un sélecteur !
 
 
+--------
+
+Code reviews turn individual knowledge into distributed knowledge.
