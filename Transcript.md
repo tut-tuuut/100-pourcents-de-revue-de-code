@@ -29,13 +29,17 @@ On avait donc des "user stories" qui sont des fonctionnalités "macro", chacune 
 
 Voici comment ça se passait : je finissais ma tâche, et je lançais à la cantonnade « coucou ! Quelqu'un est dispo pour croiser ? »
 
-Un des 3 autres arrêtait ce qu'il était en train de faire et venait s'asseoir à côté de moi. J'expliquais ce que j'avais fait, je lui montrais des morceaux de code, on discutait, si une des bonnes pratiques était vraiment piétinée, le collègue le relevait. Si je manquais quelque chose, si j'avais réinventé la roue… ça se corrigeait… si ça appartenait au code que j'avais montré au collègue.
+Un des 3 autres arrêtait ce qu'il était en train de faire et venait s'asseoir à côté de moi. J'expliquais ce que j'avais fait, je lui montrais des morceaux de code, on discutait, si une des bonnes pratiques était vraiment piétinée, le collègue le relevait. Si je manquais quelque chose, si j'avais réinventé la roue… ça se corrigeait… à condition que ça appartienne au code que j'avais montré au collègue.
 
 C'était bien, comme technique ! Déjà, ça faisait un peu de sociabilité. On n'était pas enfermé avec notre PC, on parlait un peu. On transformait notre code en mots, en phrases en français. Quand on faisait ça, il y avait un petit effet "canard en plastique" : d'expliquer comme ça le code avec des mots, à voix haute, ça donnait parfois la petite étincelle pour détecter des grosses bêtises. En plus, le collègue avait souvent des remarques bien intéressantes qui amélioraient la qualité du truc.
+ 
+Par exemple… TODO
 
 Par contre, ça avait quelques inconvénients. Déjà, on ne croisait qu'à deux, toute l'équipe n'était pas impliquée… en général. Donc l'information ne circulait pas forcément dans toute l'équipe.
 
 Ensuite, on ne croisait pas sur la totalité du code modifié, mais seulement sur les parties qu'on trouvait intéressantes au moment de la revue. Ça peut être bien si ça peut éviter de relire toutes les modifs inintéressantes (quand on ajoute des getters et des setters…) ou celles des fichiers de config, mais… par exemple, les modifs de CSS ne sont pas forcément considérées comme "intéressantes" par mes collègues, car ce sont des modifs "juste cosmétiques"… Sauf que j'ai souvent mon mot à dire sur un positionnement ou sur un sélecteur ou sur l'accessibilité !
+
+TODO inconvénient : ça pousse quelqu'un d'autre à s'interrompre dans son travail
 
 Et enfin, dernier désavantage et non des moindres : parfois, on ne croisait pas. On oubliait, ou alors il n'y avait personne de dispo au moment où on avait fini… Et petit à petit, on a perdu l'habitude de « croiser ». Et donc notre pourcentage de code revu avant mise en prod… chutait… inéluctablement.
 
@@ -63,11 +67,43 @@ Une pull request, c'est tout simplement une branche qui demande gentiment à êt
 
 Là, il y a une vision des modifs, assez sympa, et on peut commenter ligne par ligne, ou l'ensemble. Les échanges qu'on a sont souvent intéressants…
 
-… et parfois, euh, rigolos
+par exemple, voici du JS…
+tiens, du PHP…
+ici, du css
+ici, du mysql
+ici, une faute d'orthographe dans un commentaire
+ici, on a évité un bug en prod
+… et ici, on a mis des gifs…
+… et là aussi
+… bon…
+… voilà
 
-Blablabla c'est bien blablabla
+Le fait de travailler comme ça en pull request a beaucoup d'avantages (outre les gifs).
+- on apprend, la connaissance circule : les codeurs apprennent beaucoup grâce aux remarques des relecteurs. Souvent des petits détails (classList, astuces CSS), parfois des trucs plus conséquents (utilisations des Generator en PHP 5.5 par exemple)
+- comme les développeurs apprennent, la qualité du code augmente : non seulement on tend à écrire du code plus propre parce qu'on sait qu'on va être relu, mais aussi, on "oublie" difficilement d'ajouter des tests automatisés si on sait que les collègues vont nous tomber dessus à la relecture.
+- l'information (≠ connaissance) circule aussi : on sait quelles fonctionnalités sont en prod (c'est celles qui sont mergées dans le master, a priori…)… et on a une vague idée de l'explication de ce bug bizarre qui pourrit la prod depuis 20 minutes.
+- on a un historique lisible (un jolibô arbre des commits, certes — c'est important -) mais aussi exploitable : en revenant de deux semaines de vacances, on peut relire les PR qui ont été effectuées pendant les vacances, ça donne une idée de ce qui s'est passé, des problèmes qui sont survenus, etc..
 
-Si on ne bosse pas sur Github, il y a d'autres outils qui permettent de faire de la code review, que vous pouvez installer sur un serveur en local chez vous. Il suffit d'avoir un gestionnaire de version, il y a des outils qui permettent de faire de la revue de code avec SVN, bazaar, CVS… (Mais git reste mon petit préféré choupi.)
+exemples
+
+Bon, les PR c'est chouette… mais ce n'est pas non plus le pays des bisounours sur des poneys. Il y a aussi des inconvénients.
+
+- d'une part, il ne faut pas croire que de faire relire le code va vous empêcher de déployer des boulettes en prod. Voici la dernière boulette qui a été déployée. Vous trouvez que ça a l'air d'une boulette ? Nous non plus, on n'avait pas l'impression.
+- ensuite, ça demande quand même pas mal de temps et d'énergie de bien relire une PR. Ça peut avoir deux types de conséquences. Soit les relecteurs vont s'arrêter de bosser très longtemps pour bien relire votre PR… soit ils vont mal la relire et laisser passer des bêtises. Je vous laisse deviner ce qui s'est passé sur cette PR-là…
+- et finalement, la revue de code asynchrone par écrit, c'est bien, mais parfois c'est plus simple d'expliquer quelque chose à l'oral en s'asseyant l'un à côté de l'autre et en discutant 5 minutes.
+
+Voilà, j'ai à peu près fait le tour du pour et du contre. Maintenant, si je donne cette conf, c'est pour que vous aussi, vous vous mettiez à relire votre code et celui de vos collègues.
+
+Je vous rappelle mes arguments ? La revue de code, ça rend le code meilleur. Vous avez moins de bugs. Vous apprenez. Vous êtes heureux.
+
+Concrètement, comment pouvez-vous faire ?
+
+Vous avez git, mais pas de github : il y a des outils libres, open source, qui permettent de faire de la code review, que vous pouvez installer sur un serveur en local chez vous. Par exemple, vous avez Crew, développé par des gens bien, à Lyon, qui tourne en PHP avec une petite base MySQL.
+
+Vous avez pas git, mais un gestionnaire de version quand même : il y a des outils qui permettent de faire de la revue de code avec SVN, bazaar, CVS… (Mais git reste mon petit préféré choupi.) http://en.wikipedia.org/wiki/List_of_tools_for_code_review
+Le principe est toujours le même.
+
+Vous n'avez pas de gestionnaire de version : installez git ! MAINTENANT
 
 --------
 
