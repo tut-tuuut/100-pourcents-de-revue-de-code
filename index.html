@@ -54,6 +54,11 @@
 
 				<section>
 					<h1>Contexte</h1>
+				</section>
+				<section>
+					<img src="/img/logo-tea.png">
+					<p><em>The ebook alternative</em> </p>
+					<p>« Nos ebooks sont chouettes ! »</p>
 					<aside class="notes">
 						<ul>
 							<li>Fonctionnement en agile avec sprint de 2 semaines</li>
@@ -62,201 +67,38 @@
 							<li>Outils tels que Jira, Hipchat, Github</li>
 						</ul>
 					</aside>
-					<section>
+				</section>
+				<section>
 						<h2>Contexte technique</h2>
-						<ul>
-							<li>PHP, Ruby, JS, MySQL, bash… beaucoup de langages de prog</li>
-							<li>30 projets, tous versionnés avec git</li>
-							<li>Déploiement continu avec Capistrano</li>
-							<li>6 développeurs dans l'équipe qui nous intéresse</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Contexte orga</h2>
-						<ul>
-							<li>TEA : 15 personnes à Lyon</li>
-							<li>On fait du livre numérique</li>
-						</ul>
-					</section>
+						<img src="/img/environnement-fluffy.png">
+				</section>
+				<section>
+						<h2>Méthodes de travail</h2>
+						<img src="/img/gitlogo.png">
+				</section>
+				<section>
+						<h2>Méthodes de travail</h2>
+						<img src="/img/CapistranoLogo.png">
+				</section>
+				<section>
+						<h2>Méthodes de travail</h2>
+						<img src="/img/scrum.JPG">
 				</section>
 				<section>
 					<h1>Nos anciennes revues de code</h1>
 				</section>
 				<section>
-					<blockquote>
-						— Bon à partir de maintenant on va essayer de bosser uniquement par <i>pull request</i>.<br />
-						— OK.
-					</blockquote>
-					<aside class="notes">
-						<p>Ça a fonctionné parce que c'est nous, développeurs, qui choisissons notre manière de fonctionner en interne.</p>
-						<p>Agiles dans nos pratiques : expérimentation continue.</p>
-						<p>Managers et dirigeants très convaincus de l'importance d'avoir une base de code de bonne qualité, donc preneurs de tout moyen d'améliorer la qualité.</p>
-						<p>Pas de crainte de "sur qualité" comme en SSII, par exemple…</p>
-					</aside>
+					<img src="/img/croiser.png">
 				</section>
 				<section>
-					<h2>Et maintenant…</h2>
-					<h1>100 % de revue de code</h1>
-				</section>
-				
-
-				<section>
-					<h2>Chez TEA, en 2013</h2>
-					<ul>
-						<li>Pas de direction technique : juste une équipe de 10 techniciens avec des affinités différentes… mais qui peuvent intervenir sur n'importe lequel de nos différents projets.</li>
-						<li>Et si on partageait les connaissances entre nous, sans sous-entendre que certains savent tout et d'autres rien ?</li>
-						<li>La connaissance circule entre développeurs, pas juste des DT vers les dev.</li>
-						<li>ANARCHIE</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Contexte « touffu » (1)</h2>
-					<ul>
-						<li>TEA, <i>the ebook alternative</i></li>
-						<li>[montrer une liseuse]</li>
-						<li>Plein de technologies différentes : bash, Ruby, PHP, JS, HTML, CSS, MySQL, Mongo, Redis</li>
-						<li>8 développeurs dont 6 full-stack</li>
-						<li>29 projets (!)</li>
-					</ul>
-					<aside class="notes">
-						On a beaucoup de techno différentes et de développeurs compétents sur plusieurs sujets à la fois. Forcément on a plus d'affinités sur certains sujets que sur d'autres.
-					</aside>
-				</section>
-
-				<section>
-					<h2>Contexte « touffu » (2)</h2>
-					<ul>
-						<li>Tout le code est versionné sur git : on a pris l'habitude il y a bien longtemps (début 2012) de créer une branche par développement.</li>
-						<li>Déploiement des sources sur les serveurs avec capistrano</li>
-						<li>Travail en SCRUM avec des sprints de 2 semaines (6 développeurs dans les sprints, 2 hors sprint)</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Revue de code par « croisement » à l'oral avec un collègue</h2>
-					<ul>
-						<li>Avant de commencer une tâche : on explique à un collègue comment on compte faire.</li>
-						<li>Avant de marquer une tâche comme finie : on explique à un collègue comment on a fait en lui montrant les bouts de code « intéressants ».</li>
-						<li>Pendant la tâche, en cas de problème ou de question : on explique où on en est et ce qu'on veut faire.</li>
-					</ul>
-					<blockquote>
-						Quelqu'un veut croiser ?
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Revue de code par « croisement »</h2>
-					<ul>
-						<li>Petit effet « canard en plastique » qui débloque de temps en temps.</li>
-						<li>Détection de certains bugs ou écarts aux conventions.</li>
-						<li>Partage de connaissances (apprentissage) et d'informations (cette modif est passée en prod) entre les deux collègues qui interviennent.</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Revue de code par « croisement »</h2>
-					<ul>
-						<li>Inconvénients : ne permet pas toujours de débloquer ni de détecter les bugs (on a juste la vision de 2 personnes).</li>
-						<li>La circulation d'infos et de connaissances est limitée à 2 personnes : au mieux on se répète, au pire le reste de l'équipe ignore.</li>
-						<li>La personne avec qui on croise doit s'interrompre dans sa tâche. Au final c'est la disponibilité à un moment donné qui est le critère pour choisir le collègue avec qui on croise.</li>
-						<li>Avantages : c'est régulier, ça devient vite un réflexe (« qui n'a pas croisé en fin de tâche ? »). Facile à faire : on a toujours au moins un collègue à dispo.</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>100 %</h1>
-				</section>
-
-				
-
-				<section>
-					<h2>La revue de code par <em>pull request</em></h2>
-					<h3>1. Ouvrir une <em>pull request</em></h3>
-					<ul>
-						<li>Tartempion crée une branche git et commite son bazar.
-<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-git checkout -b devel/display-customer-name
-git add -p # choose which parts of files you add
-git commit # write a beautiful commit message</code></pre>
-						</li>
-						<li>Tartempion push sa branche sur le dépôt partagé sur Github.
-							<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-git push origin devel/display-customer-name</code></pre>
-						</li>
-						<li>Tartempion clique sur le bouton « open pull request » sur Github</li>
-					</ul>
+					<img src="/img/blablabla.png">
 				</section>
 				<section>
-					<h2>La revue de code par <em>pull request</em></h2>
-					<h3>2. La revue de code</em></h3>
-					<ul>
-						<li>Toto et Tata lisent sur l'interface web le code modifié par Tartempion.</li>
-						<li>Ils font des commentaires constructifs…</li>
-						<li>…ou pas.</li>
-						<li>…et Tata prend des screenshots pour sa conférence Paris Web.</li>
-					</ul>
+					<img src="/img/canard.png">
 				</section>
 				<section>
-					<h2>La revue de code par PR</h2>
-					<h3>3. La validation de la PR</h3>
-					<ul>
-						<li>Quand au moins 2 personnes ont validé la PR</li>
-						<li>Si les remarques importantes et les bugs potentiels ont été pris en compte</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Exemples de trucs qu'on remarque grâce à une PR</h2>
-					<blockquote>
-						Tiens, ça marche de faire le <code>DROP TABLE</code> avant de supprimer les contraintes de clés étrangères ?
-					</blockquote>
-					<p>=> Script de migration réparé avant la mise en prod
-				</section>
-
-				<section>
-					<h2>Exemple de truc que la PR n'a pas permis de remarquer</h2>
-					<blockquote>
-						Tiens, quand je télécharge le fichier, il s'appelle <code>la-duchesse-insoumise.acsm.acsm</code>. Pourquoi j'ai deux fois l'extension tout à coup ?
-					</blockquote>
-					<p>=> Les clients ont téléchargé des fichiers nommés bizarrement pendant une journée.
-				</section>
-
-				<section>
-					<h2>Je &lt;3 les PR</h2>
-					<table class="compare">
-						<thead>
-							<tr>
-								<td>+</td>
-								<td>–</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Partage des connaissances</td>
-								<td>Tendance à moins croiser</td>
-							</tr>
-							<tr>
-								<td>Partage des informations</td>
-								<td>On ne détecte pas tous les bugs.</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Test dessin</h2>
-					<img src="img/101203.png" alt="youpi">
-				</section>
-
-				<section>
-					<img src="img/130711b.png" alt="youpi">
-				</section>
-
-				<section>
-					<img src="img/101203.png" alt="youpi">
-				</section>
-
+Plus et moins… **RAPIDEMENT**
+				</section>	
 			</div>
 
 		</div>
