@@ -158,3 +158,12 @@ table.compare td, table.compare th {
 .compare tbody tr:nth-child(2n) {
   background: #fff;
 }
+.reveal blockquote footer {
+  font-style: normal;
+  font-size: .7em;
+  line-height: 1.2em;
+}
+/* captures d'écran pleine largeur */
+.reveal img[src~=screen] {
+  width: 100%;
+}
