@@ -1,0 +1,41 @@
+notes :
+
+Attention aux animations surtout sur les slides qui passent vite
+
+Ya pa internet
+
+Asynchrone
+
+Qu'est-ce qu'on fait pendant que les autres vont faire la PR ?
+-> travailler sur la suite
+-> PR de WIP
+
+
+Considérer PR "validée" quand 2 ou 3 personnes ont relu
+
+Tout le monde ne relit pas avec la même intention
+- "qu'est-ce qui se passe ?"
+- relecture critique
+- des fois t'es occupé et tu laisses les autres relire
+
+Dans "avantages" : essayer d'étendre la logique des PR à d'autres trucs (docs, e-mails externes…)
+
+Passer les "PR urgentes" dans les avantages, plutôt
+- poser, formaliser
+- ajouter de 
+
+
+=> insister sur les gains des PR
+
+Qu'ont permis de relever les code review ?
+- exemple de boulette qui a été évitée en prod
+- circulation des infos et de la connaissance
+- code commun
+- "pourquoi tu n'as pas utilisé XXXX ?"
+
++ tea + on recrute sur dernier slide
+
+
++ nombre de commentaires par PR ?
++ comment on travaille entre nous ? Dans quelle ambiance ? Ambiance détendue, open space (! image sympa de la boîte)
++ 
