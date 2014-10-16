@@ -168,3 +168,12 @@ table.compare td, table.compare th {
 .reveal img[src~=screen] {
   width: 100%;
 }
+
+.reveal .splash {
+  padding: 1em;
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  background: rgba(255,255,255,.9);
+}
+
+
